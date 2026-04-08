@@ -67,8 +67,8 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91-9839001970',
-      link: 'tel:+919839001970',
+      content: '+91 9839001962',
+      link: 'tel:+919839001962',
     },
     {
       icon: Mail,
