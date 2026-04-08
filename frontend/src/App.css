@@ -1,34 +1,98 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+html {
+  scroll-behavior: smooth;
 }
 
-.App-link {
-    color: #61dafb;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EAB308;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CA8A04;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hero gradient overlay */
+.hero-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, rgba(234,179,8,0.3) 100%);
+}
+
+/* Card hover effects */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Button animations */
+.btn-primary {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Loading animation */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
