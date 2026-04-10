@@ -7,7 +7,7 @@ const HomePage = () => {
     {
       name: 'Automatic Paver Blocks',
       description: 'Premium quality paver blocks manufactured using fully automatic machinery for uniform compaction and superior strength.',
-      image: 'https://images.unsplash.com/photo-1680699231780-ed1966cb70bd',
+      image: '/products/auto-paver-colors.jpeg',
       features: ['High Compressive Strength', 'Uniform Finish', 'Durable & Low Maintenance'],
     },
     {

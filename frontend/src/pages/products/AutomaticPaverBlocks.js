@@ -4,32 +4,28 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const AutomaticPaverBlocks = () => {
   const gallery = [
-    'https://images.unsplash.com/photo-1680699231780-ed1966cb70bd',
-    'https://images.unsplash.com/photo-1761193141487-b37734c89bb7',
-    'https://images.unsplash.com/photo-1744210257965-f397b3212c9b',
-    'https://images.unsplash.com/photo-1744210226545-14b218242794',
-    'https://images.unsplash.com/photo-1631719598244-1b73ab317d01',
-    'https://images.unsplash.com/photo-1617590228604-ed9e8d8d2aa1',
+    '/products/auto-paver-colors.jpeg',
+    '/products/auto-paver-pathway.jpeg',
+    '/products/auto-paver-road.jpeg',
+    '/products/auto-paver-zigzag.png',
+    '/products/auto-paver-square.jpeg',
   ];
 
   const specifications = [
     'Brick Type Paver: 200x100x80/60mm',
     'Zigzag Type Paver: 225x112.5x80/60mm',
     'Square Type Paver: 200SQ 80/60mm',
-    'High compressive strength',
-    'Uniform finish and accurate dimensions',
-    'Durable with low maintenance',
-    'Easy installation and replacement',
+    'Available in multiple attractive colors',
+    'Interlocking and designer patterns',
   ];
 
   const features = [
     'Manufactured using fully automatic machinery',
-    'Uniform compaction for superior strength',
-    'Premium raw materials under strict quality control',
+    'Uniform compaction ensuring precise dimensions',
+    'Premium raw materials with strict quality control',
     'Excellent durability and abrasion resistance',
-    'Long service life',
-    'Various sizes, shapes, and thicknesses available',
-    'Color options available on request',
+    'Long service life with minimal maintenance',
+    'Wide range of colors and patterns',
   ];
 
   const applications = [
@@ -67,8 +63,11 @@ const AutomaticPaverBlocks = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Automatic Paver Blocks
           </h1>
-          <p className="text-xl text-gray-600 max-w-4xl">
-            Premium quality paver blocks manufactured using fully automatic machinery ensuring uniform compaction, precise dimensions, and superior strength. Perfect for all your paving needs.
+          <p className="text-xl text-gray-600 max-w-4xl mb-4">
+            Hitech Concrete Products manufactures high-quality Automatic Paver Blocks using fully automatic machinery to ensure uniform compaction, precise dimensions, and superior strength. Made from premium raw materials under strict quality control, these paver blocks offer excellent durability, abrasion resistance, and long service life.
+          </p>
+          <p className="text-lg text-gray-700 max-w-4xl">
+            Perfect for driveways, parking areas, footpaths, industrial yards, and commercial pavements. Available in multiple attractive colors and designer patterns to enhance any space.
           </p>
         </div>
       </section>

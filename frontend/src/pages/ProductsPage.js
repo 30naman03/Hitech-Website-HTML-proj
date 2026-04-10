@@ -12,7 +12,7 @@ const ProductsPage = () => {
       category: 'pavers',
       featured: true,
       slug: 'automatic-paver-blocks',
-      image: 'https://images.unsplash.com/photo-1680699231780-ed1966cb70bd',
+      image: '/products/auto-paver-colors.jpeg',
       description: 'Manufactured using fully automatic machinery for uniform compaction, precise dimensions, and superior strength.',
       specifications: [
         'Brick Type: 200x100x80/60mm',
