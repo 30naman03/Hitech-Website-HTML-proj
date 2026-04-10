@@ -7,6 +7,10 @@ const AutomaticPaverBlocks = () => {
     '/products/auto-paver-colors.jpeg',
     '/products/auto-paver-pathway.jpeg',
     '/products/auto-paver-road.jpeg',
+    '/products/auto-paver-park.jpg',
+    '/products/auto-paver-herringbone.png',
+    '/products/auto-paver-circular.png',
+    '/products/auto-paver-zr80.jpg',
     '/products/auto-paver-zigzag.png',
     '/products/auto-paver-square.jpeg',
   ];
