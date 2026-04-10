@@ -9,9 +9,9 @@ const Footer = () => {
     'Automatic Paver Blocks',
     'RCC Pipes',
     'Rubbermold Pavers',
-    'Interlocking Pavers',
     'Kerb Stones',
     'Manhole Covers',
+    'Precast Boundary Walls',
   ];
 
   return (

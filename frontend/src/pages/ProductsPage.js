@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -10,6 +11,7 @@ const ProductsPage = () => {
       name: 'Automatic Paver Blocks',
       category: 'pavers',
       featured: true,
+      slug: 'automatic-paver-blocks',
       image: 'https://images.unsplash.com/photo-1680699231780-ed1966cb70bd',
       description: 'Manufactured using fully automatic machinery for uniform compaction, precise dimensions, and superior strength.',
       specifications: [
@@ -26,6 +28,7 @@ const ProductsPage = () => {
       name: 'RCC Pipes (Hume Pipes)',
       category: 'pipes',
       featured: true,
+      slug: 'rcc-pipes',
       image: 'https://images.unsplash.com/photo-1689596312367-39a4461504c1',
       description: 'Manufactured to Indian Standard Specification IS 458:2003 for drainage, sewage, and irrigation systems.',
       specifications: [
@@ -42,38 +45,27 @@ const ProductsPage = () => {
       name: 'Rubbermold Paver Blocks',
       category: 'pavers',
       featured: false,
+      slug: 'rubbermold-paver-blocks',
       image: 'https://images.unsplash.com/photo-1631719598244-1b73ab317d01',
       description: 'Durable, aesthetically designed in multiple shapes, colours, and thicknesses.',
       specifications: [
         '250x125x80mm',
         '200x100x80mm',
+        '200x100x60mm',
         '200x200x80mm',
-        'Round dumble shapes',
-        'Various color options',
+        '200x200x60mm',
+        '100x100x80mm',
+        '100x100x60mm',
+        'Grass paver and Round Dumble available on request',
       ],
       applications: ['Walkways', 'Driveways', 'Gardens', 'Commercial complexes', 'Heavy-duty applications'],
     },
     {
       id: 4,
-      name: 'Interlocking Pavers',
-      category: 'pavers',
-      featured: false,
-      image: 'https://images.unsplash.com/photo-1617590228604-ed9e8d8d2aa1',
-      description: 'Premium quality interlocking pavers with durability, high strength, and fine finishings.',
-      specifications: [
-        'Various sizes and designs',
-        'Dimensionally accurate',
-        'Fine finishings',
-        'Different color options',
-        'Easy installation and replacement',
-      ],
-      applications: ['Patios', 'Public spaces', 'Residential driveways', 'Commercial areas'],
-    },
-    {
-      id: 5,
       name: 'Kerb Stones',
       category: 'others',
       featured: false,
+      slug: 'kerb-stones',
       image: 'https://images.unsplash.com/photo-1695651832926-66591245a88c',
       description: 'Durable, precisely molded for road edges, pathways, parking lots, and landscaping applications.',
       specifications: [
@@ -86,10 +78,11 @@ const ProductsPage = () => {
       applications: ['Road edges', 'Pathways', 'Parking lots', 'Landscaping', 'Garden borders'],
     },
     {
-      id: 6,
+      id: 5,
       name: 'Saucer and Drain Covers',
       category: 'others',
       featured: false,
+      slug: 'saucer-drain-covers',
       image: 'https://images.pexels.com/photos/185039/pexels-photo-185039.jpeg',
       description: 'Durable, accurately cast for efficient surface water management.',
       specifications: [
@@ -102,10 +95,11 @@ const ProductsPage = () => {
       applications: ['Roadsides', 'Pathways', 'Parking areas', 'Commercial premises', 'Water management'],
     },
     {
-      id: 7,
+      id: 6,
       name: 'Manhole Covers',
       category: 'others',
       featured: false,
+      slug: 'manhole-covers',
       image: 'https://images.unsplash.com/photo-1631080124267-d435972bf6d9',
       description: 'Qualitative range constructed using premium quality raw material.',
       specifications: [
@@ -118,10 +112,11 @@ const ProductsPage = () => {
       applications: ['Municipalities', 'Utility access', 'Infrastructure projects', 'Urban development'],
     },
     {
-      id: 8,
+      id: 7,
       name: 'Precast Boundary Walls',
       category: 'others',
       featured: false,
+      slug: 'precast-boundary-walls',
       image: 'https://images.unsplash.com/photo-1717386255773-a456c611dc4e',
       description: 'Complete boundary wall solutions including compound walls, godown walls, and prestressed walls.',
       specifications: [
@@ -232,6 +227,14 @@ const ProductsPage = () => {
                       ))}
                     </div>
                   </div>
+
+                  <Link
+                    to={`/products/${product.slug}`}
+                    className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-all inline-flex items-center gap-2 w-full justify-center"
+                    data-testid={`view-details-${product.id}`}
+                  >
+                    View Details <ArrowRight size={18} />
+                  </Link>
                 </div>
               </div>
             ))}
