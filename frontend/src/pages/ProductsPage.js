@@ -29,7 +29,7 @@ const ProductsPage = () => {
       category: 'pipes',
       featured: true,
       slug: 'rcc-pipes',
-      image: 'https://images.unsplash.com/photo-1689596312367-39a4461504c1',
+      image: '/products/rcc-pipe-closeup.jpg',
       description: 'Manufactured to Indian Standard Specification IS 458:2003 for drainage, sewage, and irrigation systems.',
       specifications: [
         'Diameters: 150mm to 2400mm',

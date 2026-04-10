@@ -13,7 +13,7 @@ const HomePage = () => {
     {
       name: 'RCC Pipes',
       description: 'Manufactured to IS 458:2003 standards. Available in diameters from 150mm to 2400mm for all drainage and sewage needs.',
-      image: 'https://images.unsplash.com/photo-1689596312367-39a4461504c1',
+      image: '/products/rcc-pipe-closeup.jpg',
       features: ['IS 458:2003 Certified', 'Custom Lengths', 'NP2, NP3 & NP4 Classes'],
     },
   ];

@@ -4,19 +4,26 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const RCCPipes = () => {
   const gallery = [
-    'https://images.unsplash.com/photo-1689596312367-39a4461504c1',
-    'https://images.unsplash.com/photo-1695651832926-66591245a88c',
-    'https://images.unsplash.com/photo-1720175626690-d9b937f61b7a',
-    'https://images.pexels.com/photos/185039/pexels-photo-185039.jpeg',
+    '/products/rcc-pipe-factory1.jpeg',
+    '/products/rcc-pipe-closeup.jpg',
+    '/products/rcc-pipe-manufacturing.jpeg',
+    '/products/rcc-pipe-storage.jpeg',
+    '/products/rcc-pipe-factory2.jpeg',
   ];
 
   const specifications = [
     'Diameters: 150mm to 2400mm',
     'Standard Lengths: 2.0m to 2.5m',
     'Classes: NP2, NP3 & NP4',
-    'Types: Plain, Collar Joint, Flush Joint, Socket & Spigot (S&S)',
     'IS 458:2003 Certified',
     'Custom lengths available on request',
+  ];
+
+  const pipeTypes = [
+    'Plain',
+    'Collar Joint',
+    'Flush Joint',
+    'Socket & Spigot (S&S)',
   ];
 
   const features = [
@@ -87,6 +94,18 @@ const RCCPipes = () => {
                 </li>
               ))}
             </ul>
+            
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Types of Pipes</h3>
+              <ul className="space-y-2">
+                {pipeTypes.map((type, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle className="text-yellow-500 flex-shrink-0 mt-1" size={18} />
+                    <span className="text-gray-700">{type}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
