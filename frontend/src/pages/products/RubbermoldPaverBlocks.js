@@ -23,7 +23,7 @@ const RubbermoldPaverBlocks = () => {
     '200x200x60mm',
     '100x100x80mm',
     '100x100x60mm',
-    'Round dumble',
+    'Round Dumble 60mm',
     'Grass paver 80mm',
   ];
 
