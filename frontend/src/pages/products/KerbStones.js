@@ -4,10 +4,12 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const KerbStones = () => {
   const gallery = [
-    'https://images.unsplash.com/photo-1695651832926-66591245a88c',
-    'https://images.unsplash.com/photo-1761193141487-b37734c89bb7',
-    'https://images.unsplash.com/photo-1617590228604-ed9e8d8d2aa1',
+    '/products/kerb-taper.jpeg',
+    '/products/kerb-round.jpeg',
+    '/products/kerb-moulding.jpeg',
   ];
+
+  const galleryLabels = ['Taper Type', 'Round Type', 'Moulding Type'];
 
   const kerbStoneSpecs = [
     { type: 'Taper', h: '250', rl: '600', th: '150', weight: '48' },
@@ -130,14 +132,22 @@ const KerbStones = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Types Gallery</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {gallery.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <img src={image} alt={`Kerb Stones ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <div className="aspect-square overflow-hidden">
+                  <img src={image} alt={galleryLabels[index]} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="bg-gray-800 text-white text-center py-3 font-semibold">
+                  {galleryLabels[index]}
+                </div>
               </div>
             ))}
           </div>
+          <p className="text-gray-600 mt-6 text-center">
+            <em>Onsite installation photos will be added soon to showcase real-world applications</em>
+          </p>
         </div>
       </section>
 

@@ -66,7 +66,7 @@ const ProductsPage = () => {
       category: 'others',
       featured: false,
       slug: 'kerb-stones',
-      image: 'https://images.unsplash.com/photo-1695651832926-66591245a88c',
+      image: '/products/kerb-taper.jpeg',
       description: 'Durable, precisely molded for road edges, pathways, parking lots, and landscaping applications.',
       specifications: [
         'Types: Taper, Round, Moulding',
