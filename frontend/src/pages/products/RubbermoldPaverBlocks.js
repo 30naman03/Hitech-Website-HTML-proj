@@ -9,6 +9,10 @@ const RubbermoldPaverBlocks = () => {
     '/products/rubbermold-herringbone.jpg',
     '/products/rubbermold-decorative.jpg',
     '/products/rubbermold-checkered.jpg',
+    '/products/rubbermold-grass-paver.jpg',
+    '/products/rubbermold-garden-zigzag.jpg',
+    '/products/rubbermold-interlocking-closeup.jpg',
+    '/products/rubbermold-commercial.jpg',
   ];
 
   const specifications = [
