@@ -54,7 +54,7 @@ const HomePage = () => {
       <section
         className="relative h-screen flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122)',
+          backgroundImage: 'url(/hero-background.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
@@ -63,7 +63,7 @@ const HomePage = () => {
         <div className="absolute inset-0 hero-overlay"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            We Precast Concrete
+            Hitech Concrete Products
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Premium quality precast concrete products manufactured with modern technology and stringent quality control since 2004
