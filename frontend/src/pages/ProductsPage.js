@@ -46,7 +46,7 @@ const ProductsPage = () => {
       category: 'pavers',
       featured: false,
       slug: 'rubbermold-paver-blocks',
-      image: 'https://images.unsplash.com/photo-1631719598244-1b73ab317d01',
+      image: '/products/rubbermold-decorative.jpg',
       description: 'Durable, aesthetically designed in multiple shapes, colours, and thicknesses.',
       specifications: [
         '250x125x80mm',

@@ -4,10 +4,11 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const RubbermoldPaverBlocks = () => {
   const gallery = [
-    'https://images.unsplash.com/photo-1631719598244-1b73ab317d01',
-    'https://images.unsplash.com/photo-1761193141487-b37734c89bb7',
-    'https://images.unsplash.com/photo-1744210257965-f397b3212c9b',
-    'https://images.unsplash.com/photo-1617590228604-ed9e8d8d2aa1',
+    '/products/rubbermold-driveway.jpg',
+    '/products/rubbermold-pathway-border.jpg',
+    '/products/rubbermold-herringbone.jpg',
+    '/products/rubbermold-decorative.jpg',
+    '/products/rubbermold-checkered.jpg',
   ];
 
   const specifications = [
@@ -18,16 +19,18 @@ const RubbermoldPaverBlocks = () => {
     '200x200x60mm',
     '100x100x80mm',
     '100x100x60mm',
-    'Grass paver and Round Dumble available on request',
+    'Round dumble',
+    'Grass paver 80mm',
   ];
 
   const features = [
-    'Durable and aesthetically designed',
+    'Durable interlocking design',
+    'High strength and load-bearing capacity',
+    'Dimensionally accurate with fine finishings',
     'Multiple shapes, colors, and thicknesses',
-    'Manufactured in accordance with IS codes',
-    'High strength and longevity',
-    'Various color options available',
+    'Manufactured in accordance with IS standards',
     'Perfect for decorative applications',
+    'Easy installation and replacement',
   ];
 
   const applications = [
@@ -50,8 +53,12 @@ const RubbermoldPaverBlocks = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Rubbermold Paver Blocks</h1>
-          <p className="text-xl text-gray-600 max-w-4xl">
-            Durable, aesthetically designed paver blocks available in multiple shapes, colours, and thicknesses. Perfect for walkways, driveways, gardens, and commercial spaces.
+          <h2 className="text-2xl font-semibold text-yellow-600 mb-4">INTERLOCKING PAVERS</h2>
+          <p className="text-xl text-gray-600 max-w-4xl mb-4">
+            We are a profound industry engaged in trading and supplying premium quality Interlocking Pavers. Backed by experienced professionals and well-equipped infrastructure, this range conforms to the highest quality standards.
+          </p>
+          <p className="text-lg text-gray-700 max-w-4xl">
+            Durable, aesthetically designed in multiple shapes, colours, and thicknesses - perfect for walkways, driveways, gardens, and commercial spaces.
           </p>
         </div>
       </section>
