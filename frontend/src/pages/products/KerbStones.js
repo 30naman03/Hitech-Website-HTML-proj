@@ -9,13 +9,16 @@ const KerbStones = () => {
     'https://images.unsplash.com/photo-1617590228604-ed9e8d8d2aa1',
   ];
 
-  const specifications = [
-    'Types: Taper, Round, Moulding',
-    'Various dimensions and weights',
-    'Colored options: Black, Red',
-    'High durability',
-    'Precise molding',
-    'Weather resistant',
+  const kerbStoneSpecs = [
+    { type: 'Taper', h: '250', rl: '600', th: '150', weight: '48' },
+    { type: 'Taper', h: '450', rl: '300', th: '150', weight: '43' },
+    { type: 'Taper', h: '350', rl: '300', th: '150', weight: '38' },
+    { type: 'Taper', h: '300', rl: '300', th: '150', weight: '28' },
+    { type: 'Taper', h: '300', rl: '300', th: '100', weight: '17.5' },
+    { type: 'Taper', h: '200', rl: '300', th: '150', weight: '17.5' },
+    { type: 'Round', h: '300', rl: '300', th: '150', weight: '28' },
+    { type: 'Round', h: '300', rl: '450', th: '150', weight: '38.5' },
+    { type: 'Moulding', h: '250', rl: '450', th: '150', weight: '35.5' },
   ];
 
   const features = [
@@ -71,17 +74,45 @@ const KerbStones = () => {
                 </li>
               ))}
             </ul>
+            
+            <div className="mt-8 pt-6 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Color Options</h3>
+              <div className="flex gap-4">
+                <span className="px-4 py-2 bg-gray-800 text-white rounded-lg">Black</span>
+                <span className="px-4 py-2 bg-red-600 text-white rounded-lg">Red</span>
+              </div>
+            </div>
           </div>
+          
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Specifications</h2>
-            <ul className="space-y-3">
-              {specifications.map((spec, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="text-blue-500 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-gray-700">{spec}</span>
-                </li>
-              ))}
-            </ul>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Specifications Table</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="bg-gray-800 text-white">
+                    <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Type</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">H (mm)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">RL (mm)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">TH (mm)</th>
+                    <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Wt. (kg)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kerbStoneSpecs.map((spec, index) => (
+                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                      <td className="border border-gray-300 px-4 py-2 font-medium">{spec.type}</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">{spec.h}</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">{spec.rl}</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">{spec.th}</td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">{spec.weight}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm text-gray-600 mt-4">
+              <strong>Note:</strong> H = Height, RL = Running Length, TH = Thickness
+            </p>
           </div>
         </div>
       </section>

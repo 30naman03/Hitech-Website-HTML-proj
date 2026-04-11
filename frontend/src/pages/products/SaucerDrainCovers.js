@@ -9,13 +9,21 @@ const SaucerDrainCovers = () => {
     'https://images.unsplash.com/photo-1545459720-aac8509eb02c',
   ];
 
-  const specifications = [
-    'Multiple types with specific dimensions',
-    'Curved profile for smooth water flow',
-    'Reduces clogging',
-    'Perforated and solid slabs available',
-    'Long-lasting performance',
-    'Heavy-duty construction',
+  const saucerDrainSpecs = [
+    { item: '1', type: '', w: '300', rl: '300', th: '90/100', weight: '17.5' },
+    { item: '2', type: '', w: '300', rl: '300', th: '75/80', weight: '11' },
+    { item: '3', type: '(perforated)', w: '300', rl: '300', th: '90/100', weight: '16' },
+    { item: '4', type: '', w: '450', rl: '300', th: '90/100', weight: '23.5' },
+    { item: '5', type: '', w: '450', rl: '450', th: '90/100', weight: '37.5' },
+    { item: '6', type: '(perforated)', w: '450', rl: '600', th: '90/100', weight: '50.5' },
+    { item: '7', type: 'New KCD', w: '300', rl: '300', th: '155', weight: '23.5' },
+  ];
+
+  const slabSpecs = [
+    { label: 'A', type: '', w: '450', rl: '600', th: '65/70', weight: '37.5' },
+    { label: 'A', type: '', w: '450', rl: '600', th: '90/100', weight: '51.5' },
+    { label: 'B', type: '(Perforated)', w: '450', rl: '600', th: '65/70', weight: '37.5' },
+    { label: 'B', type: '(Perforated)', w: '450', rl: '600', th: '90/100', weight: '60.5' },
   ];
 
   const features = [
@@ -60,29 +68,80 @@ const SaucerDrainCovers = () => {
       </section>
 
       <section className="container mx-auto px-4 py-8">
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
-            <ul className="space-y-3">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-gray-700">{feature}</span>
-                </li>
-              ))}
-            </ul>
+        <div className="bg-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <ul className="grid md:grid-cols-2 gap-3">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
+                <span className="text-gray-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-8">
+        <div className="bg-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Saucer Drains Specifications</h2>
+          <div className="overflow-x-auto mb-8">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-gray-800 text-white">
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Item No.</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Type</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">W (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">RL (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">TH (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Wt. (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {saucerDrainSpecs.map((spec, index) => (
+                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                    <td className="border border-gray-300 px-4 py-2 text-center font-medium">{spec.item}</td>
+                    <td className="border border-gray-300 px-4 py-2">{spec.type}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.w}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.rl}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.th}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.weight}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Specifications</h2>
-            <ul className="space-y-3">
-              {specifications.map((spec, index) => (
-                <li key={index} className="flex items-start gap-3">
-                  <CheckCircle className="text-blue-500 flex-shrink-0 mt-1" size={20} />
-                  <span className="text-gray-700">{spec}</span>
-                </li>
-              ))}
-            </ul>
+
+          <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-8">Slabs Specifications</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-gray-800 text-white">
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Label</th>
+                  <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Type</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">W (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">RL (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">TH (mm)</th>
+                  <th className="border border-gray-300 px-4 py-3 text-center font-semibold">Wt. (kg)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {slabSpecs.map((spec, index) => (
+                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                    <td className="border border-gray-300 px-4 py-2 text-center font-medium">{spec.label}</td>
+                    <td className="border border-gray-300 px-4 py-2">{spec.type}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.w}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.rl}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.th}</td>
+                    <td className="border border-gray-300 px-4 py-2 text-center">{spec.weight}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
+          
+          <p className="text-sm text-gray-600 mt-4">
+            <strong>Note:</strong> W = Width, RL = Running Length, TH = Thickness
+          </p>
         </div>
       </section>
 
