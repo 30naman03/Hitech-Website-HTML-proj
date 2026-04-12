@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const SaucerDrainCovers = () => {
-  const gallery = [
-    'https://images.pexels.com/photos/185039/pexels-photo-185039.jpeg',
-    'https://images.unsplash.com/photo-1637939911694-dd0c58c18271',
-    'https://images.unsplash.com/photo-1545459720-aac8509eb02c',
+  const productGallery = [
+    '/products/saucer-slab-hitech.jpeg',
+  ];
+
+  const installationGallery = [
+    '/products/saucer-installation1.webp',
+    '/products/saucer-installation2.jpeg',
+    '/products/saucer-installation3.webp',
   ];
 
   const saucerDrainSpecs = [
@@ -63,7 +67,7 @@ const SaucerDrainCovers = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src={gallery[0]} alt="Saucer and Drain Covers" className="w-full h-96 object-cover" />
+          <img src="/products/saucer-slab-hitech.jpeg" alt="Saucer and Drain Covers" className="w-full h-96 object-contain bg-gray-50" />
         </div>
       </section>
 
@@ -158,11 +162,24 @@ const SaucerDrainCovers = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {gallery.map((image, index) => (
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Photo</h2>
+          <p className="text-gray-600 mb-6">Perforated slab with HITECH branding - showcasing quality craftsmanship</p>
+          <div className="max-w-2xl mx-auto">
+            <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <img src={productGallery[0]} alt="HITECH Perforated Slab" className="w-full h-auto object-contain bg-gray-50" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-8">
+        <div className="bg-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Gallery</h2>
+          <p className="text-gray-600 mb-6">Real-world applications showcasing Hitech saucer drains and slabs</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {installationGallery.map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <img src={image} alt={`Drain Covers ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={image} alt={`Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             ))}
           </div>
