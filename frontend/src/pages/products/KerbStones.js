@@ -64,7 +64,7 @@ const KerbStones = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src="/products/kerb-cover-installation.webp" alt="Kerb Stones Installation" className="w-full h-96 object-cover" />
+          <img src="/products/kerb-installation-landscape.jpg" alt="Kerb Stones Installation" className="w-full h-96 object-cover" />
         </div>
       </section>
 

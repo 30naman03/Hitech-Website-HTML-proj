@@ -68,7 +68,7 @@ const SaucerDrainCovers = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src="/products/saucer-slab-hitech.jpeg" alt="Saucer and Drain Covers" className="w-full h-96 object-contain bg-gray-50" />
+          <img src="/products/kerb-cover-installation.webp" alt="Saucer and Drain Covers Installation" className="w-full h-96 object-cover" />
         </div>
       </section>
 
