@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 const SaucerDrainCovers = () => {
   const productGallery = [
     '/products/saucer-slab-hitech.jpeg',
+    '/products/saucer-slab-hitech2.jpeg',
   ];
 
   const installationGallery = [
@@ -162,12 +163,14 @@ const SaucerDrainCovers = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Photo</h2>
-          <p className="text-gray-600 mb-6">Perforated slab with HITECH branding - showcasing quality craftsmanship</p>
-          <div className="max-w-2xl mx-auto">
-            <div className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <img src={productGallery[0]} alt="HITECH Perforated Slab" className="w-full h-auto object-contain bg-gray-50" />
-            </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Photos</h2>
+          <p className="text-gray-600 mb-6">Perforated slabs with HITECH branding - showcasing quality craftsmanship</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {productGallery.map((image, index) => (
+              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <img src={image} alt={`HITECH Perforated Slab ${index + 1}`} className="w-full h-auto object-contain bg-gray-50" />
+              </div>
+            ))}
           </div>
         </div>
       </section>
