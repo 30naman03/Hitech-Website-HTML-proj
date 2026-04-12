@@ -3,13 +3,17 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const KerbStones = () => {
-  const gallery = [
-    '/products/kerb-taper.jpeg',
-    '/products/kerb-round.jpeg',
-    '/products/kerb-moulding.jpeg',
+  const productGallery = [
+    { image: '/products/kerb-taper.jpeg', label: 'Taper Type' },
+    { image: '/products/kerb-round.jpeg', label: 'Round Type' },
+    { image: '/products/kerb-moulding.jpeg', label: 'Moulding Type' },
   ];
 
-  const galleryLabels = ['Taper Type', 'Round Type', 'Moulding Type'];
+  const installationGallery = [
+    '/products/kerb-installation-landscape.jpg',
+    '/products/kerb-installation-road.jpg',
+    '/products/kerb-installation-blue.jpg',
+  ];
 
   const kerbStoneSpecs = [
     { type: 'Taper', h: '250', rl: '600', th: '150', weight: '48' },
@@ -60,7 +64,7 @@ const KerbStones = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src={gallery[0]} alt="Kerb Stones" className="w-full h-96 object-cover" />
+          <img src="/products/kerb-installation-landscape.jpg" alt="Kerb Stones Installation" className="w-full h-96 object-cover" />
         </div>
       </section>
 
@@ -132,22 +136,33 @@ const KerbStones = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Types Gallery</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Types</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {gallery.map((image, index) => (
+            {productGallery.map((item, index) => (
               <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <div className="aspect-square overflow-hidden">
-                  <img src={image} alt={galleryLabels[index]} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                  <img src={item.image} alt={item.label} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
                 </div>
                 <div className="bg-gray-800 text-white text-center py-3 font-semibold">
-                  {galleryLabels[index]}
+                  {item.label}
                 </div>
               </div>
             ))}
           </div>
-          <p className="text-gray-600 mt-6 text-center">
-            <em>Onsite installation photos will be added soon to showcase real-world applications</em>
-          </p>
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-8">
+        <div className="bg-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Gallery</h2>
+          <p className="text-gray-600 mb-6">Real-world applications showcasing Hitech kerb stones in various settings</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {installationGallery.map((image, index) => (
+              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                <img src={image} alt={`Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
