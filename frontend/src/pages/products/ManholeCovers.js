@@ -5,7 +5,8 @@ import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 const ManholeCovers = () => {
   const productGallery = [
     '/products/manhole-rectangular-product.jpg',
-    '/products/manhole-perforated-product.jpg',
+    '/products/manhole-circular-frame.jpg',
+    '/products/manhole-square-perforated.jpg',
   ];
 
   const installationGallery = [
@@ -143,10 +144,10 @@ const ManholeCovers = () => {
         <div className="bg-white p-8 rounded-xl shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Product Photos</h2>
           <p className="text-gray-600 mb-6">High-quality manhole covers and frames</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {productGallery.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <img src={image} alt={`Manhole Cover Product ${index + 1}`} className="w-full h-auto object-cover hover:scale-110 transition-transform duration-500" />
+              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
+                <img src={image} alt={`Manhole Cover Product ${index + 1}`} className="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" style={{minHeight: '300px'}} />
               </div>
             ))}
           </div>
