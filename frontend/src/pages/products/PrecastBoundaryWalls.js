@@ -59,16 +59,12 @@ const PrecastBoundaryWalls = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Precast Boundary Walls</h1>
-          <h2 className="text-2xl font-semibold text-yellow-600 mb-6">Defining Limits, Ensuring Security</h2>
           <div className="max-w-4xl space-y-4 text-lg text-gray-700">
             <p>
-              At Hitech Concrete Products, we specialize in comprehensive boundary wall solutions including <strong>compound walls, godown walls, concrete boundary walls, precast boundary walls, and prestressed boundary walls</strong>. Our products are designed to meet the highest industry standards, providing both security and clear property demarcation.
+              At Hitech Concrete Products, we specialize in high-quality <strong>precast concrete boundary walls</strong> that provide both security and clear property demarcation. Our walls are designed to meet industry standards, offering the perfect solution for defining property limits while ensuring durability and aesthetic appeal.
             </p>
             <p>
-              The word "boundary" itself signifies limits - we create boundaries that help define and protect your property. A well-constructed boundary wall provides <strong>security and liability</strong>, clearly marking property lines and establishing protected spaces. Understanding the importance of these limits, we offer the best quality boundary walls to ensure everything stays within its designated boundaries.
-            </p>
-            <p>
-              Available in <strong>2 inch or 3 inch thickness</strong>, our precast boundary walls combine strength, durability, and aesthetic appeal. With quick installation and minimal maintenance, they provide long-term value for residential, commercial, and industrial applications.
+              Available in <strong>2 inch or 3 inch thickness</strong> with custom heights and lengths, our precast boundary walls combine strength, quick installation, and minimal maintenance for long-term value in residential, commercial, and industrial applications.
             </p>
           </div>
         </div>
@@ -77,19 +73,6 @@ const PrecastBoundaryWalls = () => {
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
           <img src="/products/boundary-wall-red-pavers.png" alt="Precast Boundary Walls" className="w-full h-96 object-cover" />
-        </div>
-      </section>
-
-      <section className="container mx-auto px-4 py-8">
-        <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Boundary Wall Products</h2>
-          <div className="grid md:grid-cols-5 gap-4">
-            {productTypes.map((type, index) => (
-              <div key={index} className="bg-yellow-50 border-2 border-yellow-500 p-4 rounded-lg text-center hover:bg-yellow-100 transition">
-                <p className="font-semibold text-gray-900">{type}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
