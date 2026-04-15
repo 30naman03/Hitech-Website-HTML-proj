@@ -3,16 +3,27 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
 const PrecastBoundaryWalls = () => {
-  const gallery = [
-    'https://images.unsplash.com/photo-1717386255773-a456c611dc4e',
-    'https://images.unsplash.com/photo-1573345173719-5fbd4783d3c8',
-    'https://images.pexels.com/photos/12951623/pexels-photo-12951623.jpeg',
+  const installationGallery = [
+    '/products/boundary-wall-red-pavers.png',
+    '/products/boundary-wall-white-panels.png',
+    '/products/boundary-wall-striped-garden.png',
+    '/products/boundary-wall-construction.png',
+    '/products/boundary-wall-industrial.png',
+  ];
+
+  const productTypes = [
+    'Compound Walls',
+    'Godown Walls',
+    'Concrete Boundary Walls',
+    'Precast Boundary Walls',
+    'Prestressed Boundary Walls',
   ];
 
   const specifications = [
+    'Thickness: 2 inch or 3 inch options',
     'Custom heights and lengths',
     'Prestressed options available',
-    'Quick installation',
+    'Quick installation process',
     'High security and durability',
     'Cost-effective solution',
     'Various design options',
@@ -20,12 +31,12 @@ const PrecastBoundaryWalls = () => {
 
   const features = [
     'Complete boundary wall solutions',
-    'Includes compound walls and godown walls',
-    'Prestressed concrete options',
+    'Industry-standard designs and parameters',
+    'Provides security and clear property limits',
     'Fast and easy installation',
-    'High security features',
     'Long-lasting durability',
-    'Low maintenance',
+    'Low maintenance requirements',
+    'Custom designs available',
   ];
 
   const applications = [
@@ -48,15 +59,37 @@ const PrecastBoundaryWalls = () => {
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Precast Boundary Walls</h1>
-          <p className="text-xl text-gray-600 max-w-4xl">
-            Complete boundary wall solutions including compound walls, godown walls, and prestressed walls. Perfect for property boundaries, industrial sites, and residential complexes with quick installation and high security.
-          </p>
+          <h2 className="text-2xl font-semibold text-yellow-600 mb-6">Defining Limits, Ensuring Security</h2>
+          <div className="max-w-4xl space-y-4 text-lg text-gray-700">
+            <p>
+              At Hitech Concrete Products, we specialize in comprehensive boundary wall solutions including <strong>compound walls, godown walls, concrete boundary walls, precast boundary walls, and prestressed boundary walls</strong>. Our products are designed to meet the highest industry standards, providing both security and clear property demarcation.
+            </p>
+            <p>
+              The word "boundary" itself signifies limits - we create boundaries that help define and protect your property. A well-constructed boundary wall provides <strong>security and liability</strong>, clearly marking property lines and establishing protected spaces. Understanding the importance of these limits, we offer the best quality boundary walls to ensure everything stays within its designated boundaries.
+            </p>
+            <p>
+              Available in <strong>2 inch or 3 inch thickness</strong>, our precast boundary walls combine strength, durability, and aesthetic appeal. With quick installation and minimal maintenance, they provide long-term value for residential, commercial, and industrial applications.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src={gallery[0]} alt="Precast Boundary Walls" className="w-full h-96 object-cover" />
+          <img src="/products/boundary-wall-red-pavers.png" alt="Precast Boundary Walls" className="w-full h-96 object-cover" />
+        </div>
+      </section>
+
+      <section className="container mx-auto px-4 py-8">
+        <div className="bg-white p-8 rounded-xl shadow-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Boundary Wall Products</h2>
+          <div className="grid md:grid-cols-5 gap-4">
+            {productTypes.map((type, index) => (
+              <div key={index} className="bg-yellow-50 border-2 border-yellow-500 p-4 rounded-lg text-center hover:bg-yellow-100 transition">
+                <p className="font-semibold text-gray-900">{type}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -100,11 +133,12 @@ const PrecastBoundaryWalls = () => {
 
       <section className="container mx-auto px-4 py-8">
         <div className="bg-white p-8 rounded-xl shadow-lg">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Photo Gallery</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {gallery.map((image, index) => (
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Installation Gallery</h2>
+          <p className="text-gray-600 mb-6">Real-world installations showcasing Hitech precast boundary walls in various settings</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {installationGallery.map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                <img src={image} alt={`Boundary Walls ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
+                <img src={image} alt={`Boundary Wall Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             ))}
           </div>
