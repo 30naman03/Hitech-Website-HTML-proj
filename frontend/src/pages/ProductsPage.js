@@ -12,7 +12,7 @@ const ProductsPage = () => {
       category: 'pavers',
       featured: true,
       slug: 'automatic-paver-blocks',
-      image: '/products/auto-paver-colors.jpeg',
+      image: '/products/auto-paver-pathway.jpeg',
       description: 'Manufactured using fully automatic machinery for uniform compaction, precise dimensions, and superior strength.',
       specifications: [
         'Brick Type: 200x100x80/60mm',
@@ -46,7 +46,7 @@ const ProductsPage = () => {
       category: 'pavers',
       featured: false,
       slug: 'rubbermold-paver-blocks',
-      image: '/products/rubbermold-decorative.jpg',
+      image: '/products/rubbermold-driveway.jpg',
       description: 'Durable, aesthetically designed in multiple shapes, colours, and thicknesses.',
       specifications: [
         '250x125x80mm',
@@ -66,7 +66,7 @@ const ProductsPage = () => {
       category: 'others',
       featured: false,
       slug: 'kerb-stones',
-      image: '/products/kerb-taper.jpeg',
+      image: '/products/kerb-installation-landscape.jpg',
       description: 'Durable, precisely molded for road edges, pathways, parking lots, and landscaping applications.',
       specifications: [
         'Types: Taper, Round, Moulding',
@@ -83,7 +83,7 @@ const ProductsPage = () => {
       category: 'others',
       featured: false,
       slug: 'saucer-drain-covers',
-      image: 'https://images.pexels.com/photos/185039/pexels-photo-185039.jpeg',
+      image: '/products/kerb-cover-installation.webp',
       description: 'Durable, accurately cast for efficient surface water management.',
       specifications: [
         'Multiple types with specific dimensions',
@@ -100,7 +100,7 @@ const ProductsPage = () => {
       category: 'others',
       featured: false,
       slug: 'manhole-covers',
-      image: 'https://images.unsplash.com/photo-1631080124267-d435972bf6d9',
+      image: '/products/manhole-brick-installation.jpg',
       description: 'Qualitative range constructed using premium quality raw material.',
       specifications: [
         'Rectangular: 300x300, 450x450, 600x600',
@@ -117,7 +117,7 @@ const ProductsPage = () => {
       category: 'others',
       featured: false,
       slug: 'precast-boundary-walls',
-      image: 'https://images.unsplash.com/photo-1717386255773-a456c611dc4e',
+      image: '/products/boundary-wall-red-pavers.png',
       description: 'Complete boundary wall solutions including compound walls, godown walls, and prestressed walls.',
       specifications: [
         'Custom heights and lengths',
