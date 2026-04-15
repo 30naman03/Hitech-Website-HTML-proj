@@ -79,7 +79,7 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: 'Address',
-      content: 'M/s Hitech Concrete Products',
+      content: 'Hitech Concrete Product, Post Safedabad, Barabanki -225003',
       link: null,
     },
     {

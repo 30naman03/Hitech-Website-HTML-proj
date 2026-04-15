@@ -43,7 +43,7 @@ const HomePage = () => {
     },
     {
       title: 'Timely Execution',
-      description: 'On-time delivery, every time',
+      description: 'On-time delivery',
       icon: '⏱️',
     },
   ];
@@ -63,7 +63,7 @@ const HomePage = () => {
         <div className="absolute inset-0 hero-overlay"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
-            Hitech Concrete Products
+            Hitech Concrete Product
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             Premium quality precast concrete products manufactured with modern technology and stringent quality control since 2004

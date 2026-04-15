@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,6 +10,7 @@ const Footer = () => {
     'RCC Pipes',
     'Rubbermold Pavers',
     'Kerb Stones',
+    'Saucer Drain',
     'Manhole Covers',
     'Precast Boundary Walls',
   ];
@@ -28,17 +29,6 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Leading manufacturer of high-quality precast concrete products since 2004. We precast concrete with precision and excellence.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition">
-                <Instagram size={20} />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -110,7 +100,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  M/s Hitech Concrete Products
+                  Hitech Concrete Product, Post Safedabad, Barabanki -225003
                 </span>
               </li>
             </ul>
@@ -120,7 +110,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>
-            © {currentYear} Hitech Concrete Products. All rights reserved. | Manufactured in accordance with IS Standards
+            © {currentYear} Hitech Concrete Product. All rights reserved. | Manufactured in accordance with IS Standards
           </p>
         </div>
       </div>

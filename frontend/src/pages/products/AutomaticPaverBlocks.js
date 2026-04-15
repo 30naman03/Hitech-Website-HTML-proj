@@ -68,7 +68,7 @@ const AutomaticPaverBlocks = () => {
             Automatic Paver Blocks
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mb-4">
-            Hitech Concrete Products manufactures high-quality Automatic Paver Blocks using fully automatic machinery to ensure uniform compaction, precise dimensions, and superior strength. Made from premium raw materials under strict quality control, these paver blocks offer excellent durability, abrasion resistance, and long service life.
+            Hitech Concrete Product manufactures high-quality Automatic Paver Blocks using fully automatic machinery to ensure uniform compaction, precise dimensions, and superior strength. Made from premium raw materials under strict quality control, these paver blocks offer excellent durability, abrasion resistance, and long service life.
           </p>
           <p className="text-lg text-gray-700 max-w-4xl">
             Perfect for driveways, parking areas, footpaths, industrial yards, and commercial pavements. Available in multiple attractive colors and designer patterns to enhance any space.

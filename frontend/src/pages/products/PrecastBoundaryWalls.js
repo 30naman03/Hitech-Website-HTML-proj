@@ -61,7 +61,7 @@ const PrecastBoundaryWalls = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Precast Boundary Walls</h1>
           <div className="max-w-4xl space-y-4 text-lg text-gray-700">
             <p>
-              At Hitech Concrete Products, we specialize in high-quality <strong>precast concrete boundary walls</strong> that provide both security and clear property demarcation. Our walls are designed to meet industry standards, offering the perfect solution for defining property limits while ensuring durability and aesthetic appeal.
+              At Hitech Concrete Product, we specialize in high-quality <strong>precast concrete boundary walls</strong> that provide both security and clear property demarcation. Our walls are designed to meet industry standards, offering the perfect solution for defining property limits while ensuring durability and aesthetic appeal.
             </p>
             <p>
               Available in <strong>2 inch or 3 inch thickness</strong> with custom heights and lengths, our precast boundary walls combine strength, quick installation, and minimal maintenance for long-term value in residential, commercial, and industrial applications.

@@ -21,7 +21,7 @@ const AboutPage = () => {
   ];
 
   const milestones = [
-    { year: '2004', event: 'Hitech Concrete Products established' },
+    { year: '2004', event: 'Hitech Concrete Product established' },
     { year: '2008', event: 'Installed first fully automatic paver block plant' },
     { year: '2012', event: 'IS 458:2003 certification achieved for RCC Pipes' },
     { year: '2015', event: 'Expanded product range to 8+ categories' },
@@ -56,7 +56,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">We Precast Concrete</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Established in <strong className="text-yellow-600">2004</strong>, Hitech Concrete Products has earned a reputation for manufacturing, popularizing, and marketing high-quality precast concrete products through modern technology, stringent quality control, timely execution, and continuous research and development.
+                Established in <strong className="text-yellow-600">2004</strong>, Hitech Concrete Product has earned a reputation for manufacturing, popularizing, and marketing high-quality precast concrete products through modern technology, stringent quality control, timely execution, and continuous research and development.
               </p>
               <p className="text-lg text-gray-700 mb-6">
                 We specialize in providing custom-made solutions and total engineering packages for pipeline projects and infrastructure development. Our fully automatic plants ensure uniform quality, precise dimensions, and superior strength in every product.
