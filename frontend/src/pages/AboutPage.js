@@ -81,16 +81,25 @@ const AboutPage = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img
-                src="/products/auto-paver-pathway.jpeg"
-                alt="Automatic Paver Block Installation"
-                className="rounded-lg shadow-lg h-64 object-cover"
-              />
-              <img
-                src="/products/kerb-installation-landscape.jpg"
-                alt="Kerb Stone Installation"
-                className="rounded-lg shadow-lg h-64 object-cover mt-8"
-              />
+              <div className="space-y-4">
+                <img
+                  src="/products/auto-paver-road.jpeg"
+                  alt="Automatic Paver Block Road Installation"
+                  className="rounded-lg shadow-lg h-48 w-full object-cover"
+                />
+                <img
+                  src="/products/rubbermold-driveway.jpg"
+                  alt="Rubbermold Paver Driveway"
+                  className="rounded-lg shadow-lg h-56 w-full object-cover"
+                />
+              </div>
+              <div className="pt-6">
+                <img
+                  src="/products/kerb-installation-road.jpg"
+                  alt="Kerb Stone Road Installation"
+                  className="rounded-lg shadow-lg h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
