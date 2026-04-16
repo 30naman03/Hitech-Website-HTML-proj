@@ -35,12 +35,12 @@ const AboutPage = () => {
       <section
         className="relative py-20 text-white"
         style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1455165814004-1126a7199f9b)',
+          backgroundImage: 'url(/about-hero-daman.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gray-900/75"></div>
+        <div className="absolute inset-0 bg-gray-900/67"></div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">About Hitech</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">
@@ -82,13 +82,13 @@ const AboutPage = () => {
             </div>
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="https://images.unsplash.com/photo-1647427060118-4911c9821b82"
-                alt="Manufacturing"
+                src="/products/auto-paver-pathway.jpeg"
+                alt="Automatic Paver Block Installation"
                 className="rounded-lg shadow-lg h-64 object-cover"
               />
               <img
-                src="https://images.pexels.com/photos/12951623/pexels-photo-12951623.jpeg"
-                alt="Quality Control"
+                src="/products/kerb-installation-landscape.jpg"
+                alt="Kerb Stone Installation"
                 className="rounded-lg shadow-lg h-64 object-cover mt-8"
               />
             </div>
