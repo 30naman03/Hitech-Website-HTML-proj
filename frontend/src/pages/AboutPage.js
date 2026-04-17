@@ -22,11 +22,12 @@ const AboutPage = () => {
 
   const milestones = [
     { year: '2004', event: 'Hitech Concrete Product established' },
-    { year: '2008', event: 'Installed first fully automatic paver block plant' },
-    { year: '2012', event: 'IS 458:2003 certification achieved for RCC Pipes' },
-    { year: '2015', event: 'Expanded product range to 8+ categories' },
-    { year: '2020', event: 'Served 500+ satisfied clients across India' },
-    { year: '2024', event: 'Continuing innovation in precast concrete technology' },
+    { year: '2005', event: 'IS 458:2003 certification achieved for RCC Pipes' },
+    { year: '2015', event: 'Expanded the product range to 8+ categories' },
+    { year: '2017', event: 'Installed a fully automatic vertical casting plant for RCC pipes' },
+    { year: '2024', event: 'Served 500+ satisfied clients across India' },
+    { year: '2025', event: 'Installed a fully automatic paver block plant' },
+    { year: '2026', event: 'Continuing innovation and growth in precast concrete technology' },
   ];
 
   return (
