@@ -80,8 +80,8 @@ const ContactPage = () => {
     {
       icon: MapPin,
       title: 'Address',
-      content: 'Hitech Concrete Product, Post Safedabad, Barabanki -225003',
-      link: null,
+      content: 'Hitech Concrete Product, Village Mohammadpur Chowki, Post Safedabad, Barabanki -225003',
+      link: 'https://maps.app.goo.gl/hGiaYdU7z49zBtpz5',
     },
     {
       icon: Clock,
@@ -132,6 +132,8 @@ const ContactPage = () => {
                   ) : info.link ? (
                     <a
                       href={info.link}
+                      target={info.link.startsWith('http') ? '_blank' : undefined}
+                      rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                       className="text-gray-600 hover:text-yellow-500 transition"
                     >
                       {info.content}

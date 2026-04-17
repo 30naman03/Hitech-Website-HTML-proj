@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -107,19 +107,37 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">
-                  Hitech Concrete Product, Post Safedabad, Barabanki -225003
-                </span>
+                <a
+                  href="https://maps.app.goo.gl/hGiaYdU7z49zBtpz5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-yellow-400 transition"
+                >
+                  Hitech Concrete Product, Village Mohammadpur Chowki, Post Safedabad, Barabanki -225003
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>
-            © {currentYear} Hitech Concrete Product. All rights reserved. | Manufactured in accordance with IS Standards
-          </p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-gray-400 text-center md:text-left">
+              © {currentYear} Hitech Concrete Product. All rights reserved. | Manufactured in accordance with IS Standards
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://www.linkedin.com/company/hitech-concrete-product/?originalSubdomain=in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-yellow-400 transition-colors"
+                aria-label="Visit our LinkedIn page"
+              >
+                <Linkedin size={24} />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
