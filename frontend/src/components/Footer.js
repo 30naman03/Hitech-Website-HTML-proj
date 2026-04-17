@@ -108,7 +108,7 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-yellow-400 mt-1 flex-shrink-0" />
                 <a
-                  href="https://maps.app.goo.gl/hGiaYdU7z49zBtpz5"
+                  href="https://www.google.com/maps/place/Hitech+Concrete+Product/@26.9003149,81.0958083,888m/data=!3m1!1e3!4m6!3m5!1s0x39995f676e346041:0x9aec9976e544c18e!8m2!3d26.900411!4d81.098413!16s%2Fg%2F11bwq968j0?entry=tts"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-yellow-400 transition cursor-pointer hover:underline"
