@@ -134,7 +134,7 @@ const ContactPage = () => {
                       href={info.link}
                       target={info.link.startsWith('http') ? '_blank' : undefined}
                       rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                      className="text-gray-600 hover:text-yellow-500 transition"
+                      className="text-gray-600 hover:text-yellow-500 transition cursor-pointer hover:underline"
                     >
                       {info.content}
                     </a>

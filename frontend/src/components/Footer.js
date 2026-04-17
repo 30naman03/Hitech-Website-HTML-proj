@@ -111,7 +111,7 @@ const Footer = () => {
                   href="https://maps.app.goo.gl/hGiaYdU7z49zBtpz5"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-yellow-400 transition"
+                  className="text-gray-400 hover:text-yellow-400 transition cursor-pointer hover:underline"
                 >
                   Hitech Concrete Product, Village Mohammadpur Chowki, Post Safedabad, Barabanki -225003
                 </a>
