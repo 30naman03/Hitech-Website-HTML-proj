@@ -174,7 +174,7 @@ const ManholeCovers = () => {
           <p className="text-xl mb-8 max-w-2xl mx-auto">Available in LD, MD, and HD grades for all applications</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-yellow-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-600 transition-all inline-block">Request a Quote</Link>
-            <a href="tel:+919839001962" className="bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
+            <a href="tel:+919839001970" className="bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2">
               <Phone size={20} />Call Us Now
             </a>
           </div>

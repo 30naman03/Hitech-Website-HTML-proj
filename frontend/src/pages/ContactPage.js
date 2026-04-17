@@ -67,8 +67,9 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91 9839001962',
-      link: 'tel:+919839001962',
+      content: ['+91 9839001970', '+91 6390164990'],
+      link: 'tel:+919839001970',
+      isMultiple: true,
     },
     {
       icon: Mail,
@@ -116,7 +117,19 @@ const ContactPage = () => {
                 >
                   <Icon className="w-12 h-12 mx-auto mb-4 text-yellow-500" />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
-                  {info.link ? (
+                  {info.isMultiple ? (
+                    <div className="space-y-1">
+                      {info.content.map((item, idx) => (
+                        <a
+                          key={idx}
+                          href={idx === 0 ? 'tel:+919839001970' : 'tel:+916390164990'}
+                          className="block text-gray-600 hover:text-yellow-500 transition"
+                        >
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                  ) : info.link ? (
                     <a
                       href={info.link}
                       className="text-gray-600 hover:text-yellow-500 transition"

@@ -173,7 +173,7 @@ const AutomaticPaverBlocks = () => {
               Request a Quote
             </Link>
             <a
-              href="tel:+919839001962"
+              href="tel:+919839001970"
               className="bg-white text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2"
             >
               <Phone size={20} />
