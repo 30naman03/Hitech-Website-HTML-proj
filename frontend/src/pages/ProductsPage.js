@@ -205,8 +205,8 @@ const ProductsPage = () => {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Specifications:</h4>
                     <ul className="space-y-1">
-                      {product.specifications.slice(0, 3).map((spec, idx) => (
-                        <li key={idx} className="text-sm text-gray-600 flex items-start gap-2">
+                      {product.specifications.slice(0, 3).map((spec) => (
+                        <li key={spec} className="text-sm text-gray-600 flex items-start gap-2">
                           <CheckCircle size={16} className="text-green-500 mt-0.5 flex-shrink-0" />
                           <span>{spec}</span>
                         </li>
@@ -217,9 +217,9 @@ const ProductsPage = () => {
                   <div className="mb-4">
                     <h4 className="font-semibold text-gray-900 mb-2">Applications:</h4>
                     <div className="flex flex-wrap gap-2">
-                      {product.applications.slice(0, 3).map((app, idx) => (
+                      {product.applications.slice(0, 3).map((app) => (
                         <span
-                          key={idx}
+                          key={app}
                           className="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full"
                         >
                           {app}

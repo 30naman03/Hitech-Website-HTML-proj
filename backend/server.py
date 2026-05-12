@@ -58,11 +58,11 @@ class ContactInquiryCreate(BaseModel):
 
 # Add your routes to the router instead of directly to app
 @api_router.get("/")
-async def root():
+async def root() -> dict:
     return {"message": "Hitech Concrete Product API"}
 
 @api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
+async def create_status_check(input: StatusCheckCreate) -> StatusCheck:
     status_dict = input.model_dump()
     status_obj = StatusCheck(**status_dict)
     
@@ -74,7 +74,7 @@ async def create_status_check(input: StatusCheckCreate):
     return status_obj
 
 @api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
+async def get_status_checks() -> List[StatusCheck]:
     # Exclude MongoDB's _id field from the query results
     status_checks = await db.status_checks.find({}, {"_id": 0}).to_list(1000)
     
@@ -86,7 +86,7 @@ async def get_status_checks():
     return status_checks
 
 @api_router.post("/inquiries", response_model=ContactInquiry)
-async def create_inquiry(inquiry: ContactInquiryCreate):
+async def create_inquiry(inquiry: ContactInquiryCreate) -> ContactInquiry:
     """Create a new contact inquiry"""
     try:
         inquiry_dict = inquiry.model_dump()
@@ -103,7 +103,7 @@ async def create_inquiry(inquiry: ContactInquiryCreate):
         raise HTTPException(status_code=500, detail="Failed to submit inquiry")
 
 @api_router.get("/inquiries", response_model=List[ContactInquiry])
-async def get_inquiries(limit: int = 100):
+async def get_inquiries(limit: int = 100) -> List[ContactInquiry]:
     """Get all contact inquiries (admin endpoint)"""
     try:
         inquiries = await db.inquiries.find({}, {"_id": 0}).sort("timestamp", -1).to_list(limit)
@@ -137,5 +137,5 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 @app.on_event("shutdown")
-async def shutdown_db_client():
+async def shutdown_db_client() -> None:
     client.close()

@@ -91,10 +91,10 @@ const HomePage = () => {
       <section className="bg-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
+            {stats.map((stat) => {
               const Icon = stat.icon;
               return (
-                <div key={index} className="text-center">
+                <div key={stat.label} className="text-center">
                   <Icon className="w-12 h-12 mx-auto mb-4 text-yellow-400" />
                   <div className="text-4xl font-bold text-yellow-400 mb-2">{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
@@ -116,11 +116,11 @@ const HomePage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {featuredProducts.map((product, index) => (
+            {featuredProducts.map((product) => (
               <div
-                key={index}
+                key={product.name}
                 className="bg-white rounded-xl shadow-lg overflow-hidden product-card"
-                data-testid={`featured-product-${index}`}
+                data-testid={`featured-product-${product.name.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="h-64 overflow-hidden">
                   <img
@@ -133,8 +133,8 @@ const HomePage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{product.name}</h3>
                   <p className="text-gray-600 mb-4">{product.description}</p>
                   <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-gray-700">
+                    {product.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-gray-700">
                         <CheckCircle size={18} className="text-green-500 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
@@ -164,11 +164,11 @@ const HomePage = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {usps.map((usp, index) => (
+            {usps.map((usp) => (
               <div
-                key={index}
+                key={usp.title}
                 className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2"
-                data-testid={`usp-card-${index}`}
+                data-testid={`usp-card-${usp.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="text-5xl mb-4">{usp.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{usp.title}</h3>
