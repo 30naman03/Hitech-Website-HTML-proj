@@ -1,0 +1,21 @@
+/*
+Theme Name: Hitech Concrete Product
+Theme URI: https://hitechconcrete.com
+Author: Hitech Concrete Product
+Author URI: https://hitechconcrete.com
+Description: Professional WordPress theme for Hitech Concrete Product - Leading manufacturer of precast concrete products since 2004
+Version: 1.0.0
+Requires at least: 5.8
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hitech-concrete
+Tags: business, concrete, manufacturing, products, responsive, custom-menu
+
+Hitech Concrete Product WordPress Theme, Copyright 2026
+Hitech Concrete Product is distributed under the terms of the GNU GPL
+*/
+
+/* Import main stylesheet */
+@import url('assets/css/main.css');
