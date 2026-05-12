@@ -116,13 +116,13 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {values.map((value, index) => {
+            {values.map((value) => {
               const Icon = value.icon;
               return (
                 <div
-                  key={index}
+                  key={value.title}
                   className="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition"
-                  data-testid={`value-card-${index}`}
+                  data-testid={`value-card-${value.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <Icon className="w-16 h-16 mx-auto mb-4 text-yellow-500" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-3">{value.title}</h3>
@@ -144,11 +144,11 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
-            {milestones.map((milestone, index) => (
+            {milestones.map((milestone) => (
               <div
-                key={index}
+                key={milestone.year}
                 className="flex gap-6 mb-8 group"
-                data-testid={`milestone-${index}`}
+                data-testid={`milestone-${milestone.year}`}
               >
                 <div className="flex-shrink-0">
                   <div className="w-20 h-20 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition">

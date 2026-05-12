@@ -81,8 +81,8 @@ const PrecastBoundaryWalls = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
             <ul className="space-y-3">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {features.map((feature) => (
+                <li key={feature} className="flex items-start gap-3">
                   <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
                   <span className="text-gray-700">{feature}</span>
                 </li>
@@ -93,7 +93,7 @@ const PrecastBoundaryWalls = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Specifications</h2>
             <ul className="space-y-3">
               {specifications.map((spec, index) => (
-                <li key={index} className="flex items-start gap-3">
+                <li key={feature} className="flex items-start gap-3">
                   <CheckCircle className="text-blue-500 flex-shrink-0 mt-1" size={20} />
                   <span className="text-gray-700">{spec}</span>
                 </li>
@@ -108,7 +108,7 @@ const PrecastBoundaryWalls = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Applications</h2>
           <div className="flex flex-wrap gap-3">
             {applications.map((app, index) => (
-              <span key={index} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
+              <span key={feature} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
             ))}
           </div>
         </div>
@@ -120,7 +120,7 @@ const PrecastBoundaryWalls = () => {
           <p className="text-gray-600 mb-6">Real-world installations showcasing Hitech precast boundary walls in various settings</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {installationGallery.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <div key={feature} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <img src={image} alt={`Boundary Wall Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             ))}

@@ -76,8 +76,8 @@ const SaucerDrainCovers = () => {
         <div className="bg-white p-8 rounded-xl shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
           <ul className="grid md:grid-cols-2 gap-3">
-            {features.map((feature, index) => (
-              <li key={index} className="flex items-start gap-3">
+            {features.map((feature) => (
+              <li key={feature} className="flex items-start gap-3">
                 <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
                 <span className="text-gray-700">{feature}</span>
               </li>
@@ -103,7 +103,7 @@ const SaucerDrainCovers = () => {
               </thead>
               <tbody>
                 {saucerDrainSpecs.map((spec, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <tr key={feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="border border-gray-300 px-4 py-2 text-center font-medium">{spec.item}</td>
                     <td className="border border-gray-300 px-4 py-2">{spec.type}</td>
                     <td className="border border-gray-300 px-4 py-2 text-center">{spec.w}</td>
@@ -131,7 +131,7 @@ const SaucerDrainCovers = () => {
               </thead>
               <tbody>
                 {slabSpecs.map((spec, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <tr key={feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="border border-gray-300 px-4 py-2 text-center font-medium">{spec.label}</td>
                     <td className="border border-gray-300 px-4 py-2">{spec.type}</td>
                     <td className="border border-gray-300 px-4 py-2 text-center">{spec.w}</td>
@@ -155,7 +155,7 @@ const SaucerDrainCovers = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Applications</h2>
           <div className="flex flex-wrap gap-3">
             {applications.map((app, index) => (
-              <span key={index} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
+              <span key={feature} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
             ))}
           </div>
         </div>
@@ -167,7 +167,7 @@ const SaucerDrainCovers = () => {
           <p className="text-gray-600 mb-6">Perforated slabs with HITECH branding - showcasing quality craftsmanship</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {productGallery.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <div key={feature} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <img src={image} alt={`HITECH Perforated Slab ${index + 1}`} className="w-full h-auto object-contain bg-gray-50" />
               </div>
             ))}
@@ -181,7 +181,7 @@ const SaucerDrainCovers = () => {
           <p className="text-gray-600 mb-6">Real-world applications showcasing Hitech saucer drains and slabs</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {installationGallery.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <div key={feature} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <img src={image} alt={`Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             ))}

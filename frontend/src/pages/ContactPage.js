@@ -105,24 +105,24 @@ const ContactPage = () => {
 
       {/* Contact Info Cards */}
       <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div class="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactInfo.map((info, index) => {
+            {contactInfo.map((info) => {
               const Icon = info.icon;
               return (
                 <div
-                  key={index}
+                  key={info.title}
                   className="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition text-center"
-                  data-testid={`contact-info-${index}`}
+                  data-testid={`contact-info-${info.title.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <Icon className="w-12 h-12 mx-auto mb-4 text-yellow-500" />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{info.title}</h3>
                   {info.isMultiple ? (
                     <div className="space-y-1">
-                      {info.content.map((item, idx) => (
+                      {info.content.map((item) => (
                         <a
-                          key={idx}
-                          href={idx === 0 ? 'tel:+919839001970' : 'tel:+916390164990'}
+                          key={item}
+                          href={item.includes('9839001970') ? 'tel:+919839001970' : 'tel:+916390164990'}
                           className="block text-gray-600 hover:text-yellow-500 transition"
                         >
                           {item}
@@ -252,8 +252,8 @@ const ContactPage = () => {
                     data-testid="contact-form-product"
                   >
                     <option value="">Select a product</option>
-                    {productOptions.map((product, index) => (
-                      <option key={index} value={product}>
+                    {productOptions.map((product) => (
+                      <option key={product} value={product}>
                         {product}
                       </option>
                     ))}

@@ -74,8 +74,8 @@ const ManholeCovers = () => {
         <div className="bg-white p-8 rounded-xl shadow-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
+            {features.map((feature) => (
+              <div key={feature} className="flex items-start gap-3">
                 <CheckCircle className="text-green-500 flex-shrink-0 mt-1" size={20} />
                 <span className="text-gray-700">{feature}</span>
               </div>
@@ -101,7 +101,7 @@ const ManholeCovers = () => {
               </thead>
               <tbody>
                 {manholeSpecs.map((spec, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                  <tr key={feature} className={index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                     <td className="border border-gray-300 px-3 py-2 font-medium">{spec.size}</td>
                     <td className="border border-gray-300 px-3 py-2 text-center">
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
@@ -134,7 +134,7 @@ const ManholeCovers = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Applications</h2>
           <div className="flex flex-wrap gap-3">
             {applications.map((app, index) => (
-              <span key={index} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
+              <span key={feature} className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-semibold">{app}</span>
             ))}
           </div>
         </div>
@@ -146,7 +146,7 @@ const ManholeCovers = () => {
           <p className="text-gray-600 mb-6">High-quality manhole covers and frames</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {productGallery.map((image, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
+              <div key={feature} className="overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow bg-white">
                 <img src={image} alt={`Manhole Cover Product ${index + 1}`} className="w-full h-auto object-contain hover:scale-110 transition-transform duration-500" style={{minHeight: '300px'}} />
               </div>
             ))}
@@ -160,7 +160,7 @@ const ManholeCovers = () => {
           <p className="text-gray-600 mb-6">Real-world installations showcasing Hitech manhole covers</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {installationGallery.map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
+              <div key={feature} className="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <img src={image} alt={`Manhole Installation ${index + 1}`} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
               </div>
             ))}

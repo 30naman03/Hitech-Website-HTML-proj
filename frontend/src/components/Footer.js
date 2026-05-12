@@ -62,8 +62,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-yellow-400">Our Products</h3>
             <ul className="space-y-2">
-              {products.map((product, index) => (
-                <li key={index}>
+              {products.map((product) => (
+                <li key={product}>
                   <Link
                     to="/products"
                     className="text-gray-400 hover:text-yellow-400 transition text-sm"

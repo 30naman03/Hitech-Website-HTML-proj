@@ -13,7 +13,7 @@ const Header = () => {
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, []); // setIsScrolled is stable from useState
 
   const navLinks = [
     { path: '/', label: 'Home' },
