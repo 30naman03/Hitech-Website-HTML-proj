@@ -16,10 +16,24 @@
 - [x] products/precast-boundary-walls.html
 
 ### Core Files ✅
-- [x] css/style.css (1,000+ lines of responsive CSS)
-- [x] js/main.js (Mobile menu, animations, smooth scroll)
+- [x] css/style.css (Full responsive CSS with product detail page styles)
+- [x] js/main.js (Mobile menu, scroll effects, contact form AJAX submit)
 - [x] images/ folder (50+ images)
 - [x] README.md (Complete documentation)
+- [x] SETUP_FORM.md (Web3Forms contact form setup instructions)
+
+## ✉️ Important: Configure Contact Form Before/After Upload
+
+The contact form on `contact.html` uses **Web3Forms** to email submissions
+to you (no backend required — perfect for GoDaddy static hosting).
+
+**One-time setup (takes ~2 minutes):**
+1. Get a free access key at https://web3forms.com (enter `hitecht09@gmail.com`)
+2. Open `contact.html`, find `YOUR_ACCESS_KEY`, replace with your key
+3. Save & upload
+
+See `SETUP_FORM.md` for full details. Until this is done, the form will
+show a friendly "not configured" message instead of submitting.
 
 ## 🚀 Deployment Steps for GoDaddy
 

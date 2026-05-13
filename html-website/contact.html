@@ -89,7 +89,54 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-2" style="gap: 3rem; align-items: center;">
+            <div class="grid grid-cols-2" style="gap: 3rem; align-items: start; margin-bottom: 4rem;">
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <p style="color: var(--color-gray-600); margin-bottom: 1.5rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <form id="hitechContactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- IMPORTANT: Replace YOUR_ACCESS_KEY with the key you receive from https://web3forms.com -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New inquiry from Hitech Concrete Product website">
+                        <input type="hidden" name="from_name" value="Hitech Concrete Website">
+                        <input type="hidden" name="redirect" value="false">
+                        <!-- Honeypot to prevent spam -->
+                        <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+91 9XXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Product of Interest</label>
+                            <select id="product" name="product">
+                                <option value="">-- Select a product (optional) --</option>
+                                <option value="Automatic Paver Blocks">Automatic Paver Blocks</option>
+                                <option value="RCC Pipes (Hume Pipes)">RCC Pipes (Hume Pipes)</option>
+                                <option value="Rubbermold Paver Blocks">Rubbermold Paver Blocks</option>
+                                <option value="Kerb Stones">Kerb Stones</option>
+                                <option value="Saucer & Drain Covers">Saucer &amp; Drain Covers</option>
+                                <option value="Manhole Covers">Manhole Covers</option>
+                                <option value="Precast Boundary Walls">Precast Boundary Walls</option>
+                                <option value="Other / General Inquiry">Other / General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us about your project, required quantities, delivery location, etc."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">Send Message</button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+
                 <div>
                     <h3 style="font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--color-gray-900);">Visit Our Location</h3>
                     <p style="color: var(--color-gray-600); margin-bottom: 1rem; line-height: 1.8;">
@@ -104,13 +151,11 @@
                         Monday - Saturday: 9:00 AM - 6:00 PM<br>
                         Sunday: Closed
                     </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
                         <a href="tel:+919839001970" class="btn btn-primary">Call Us Now</a>
                         <a href="https://wa.me/916390164990?text=Hello!%20I%20am%20interested%20in%20your%20concrete%20products." target="_blank" class="btn btn-secondary">WhatsApp</a>
                     </div>
-                </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.0!2d81.098413!3d26.900411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995f676e346041%3A0x9aec9976e544c18e!2sHitech%20Concrete%20Product!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0; border-radius: 0.75rem;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.0!2d81.098413!3d26.900411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39995f676e346041%3A0x9aec9976e544c18e!2sHitech%20Concrete%20Product!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="320" style="border:0; border-radius: 0.75rem;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>

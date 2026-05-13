@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Set Active Navigation
   setActiveNav();
+
+  // Contact form (Web3Forms)
+  initContactForm();
   
 });
 
@@ -186,3 +189,60 @@ function createBackToTop() {
 
 // Uncomment to enable back-to-top button
 // createBackToTop();
+
+/**
+ * Contact Form (Web3Forms integration)
+ *
+ * Submits the form via AJAX so the user stays on the page.
+ * Replace the `access_key` value in contact.html with your own key
+ * from https://web3forms.com (free, no signup payment).
+ */
+function initContactForm() {
+  const form = document.getElementById('hitechContactForm');
+  const status = document.getElementById('formStatus');
+  if (!form || !status) return;
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    status.className = 'form-status';
+    status.style.display = 'none';
+    status.textContent = '';
+
+    const accessKey = form.querySelector('input[name="access_key"]').value;
+    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY') {
+      status.className = 'form-status error';
+      status.textContent = 'Form is not configured yet. Please add your Web3Forms access key in contact.html (see SETUP_FORM.md).';
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        status.className = 'form-status success';
+        status.textContent = 'Thank you! Your message has been sent. We will contact you soon.';
+        form.reset();
+      } else {
+        status.className = 'form-status error';
+        status.textContent = (data && data.message) ? data.message : 'Sorry, something went wrong. Please try again or call us.';
+      }
+    } catch (err) {
+      status.className = 'form-status error';
+      status.textContent = 'Network error. Please try again or call +91 9839001970.';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
+}
