@@ -191,11 +191,7 @@ function createBackToTop() {
 // createBackToTop();
 
 /**
- * Contact Form (Web3Forms integration)
- *
- * Submits the form via AJAX so the user stays on the page.
- * Replace the `access_key` value in contact.html with your own key
- * from https://web3forms.com (free, no signup payment).
+ * Contact Form (Netlify Forms integration)
  */
 function initContactForm() {
   const form = document.getElementById('hitechContactForm');
@@ -209,33 +205,25 @@ function initContactForm() {
     status.style.display = 'none';
     status.textContent = '';
 
-    const accessKey = form.querySelector('input[name="access_key"]').value;
-    if (!accessKey || accessKey === 'YOUR_ACCESS_KEY') {
-      status.className = 'form-status error';
-      status.textContent = 'Form is not configured yet. Please add your Web3Forms access key in contact.html (see SETUP_FORM.md).';
-      return;
-    }
-
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
     try {
-      const formData = new FormData(form);
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/', {
         method: 'POST',
-        body: formData
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
       });
-      const data = await response.json();
 
-      if (response.ok && data.success) {
+      if (response.ok) {
         status.className = 'form-status success';
         status.textContent = 'Thank you! Your message has been sent. We will contact you soon.';
         form.reset();
       } else {
         status.className = 'form-status error';
-        status.textContent = (data && data.message) ? data.message : 'Sorry, something went wrong. Please try again or call us.';
+        status.textContent = 'Sorry, something went wrong. Please try again or call us.';
       }
     } catch (err) {
       status.className = 'form-status error';
